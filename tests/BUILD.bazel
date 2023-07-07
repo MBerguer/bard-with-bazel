@@ -1,0 +1,5 @@
+py_test(
+    name = "bard_module_test",
+    srcs = ["bard_module_test.py"],
+    deps = ["//src:bard_module"],
+)

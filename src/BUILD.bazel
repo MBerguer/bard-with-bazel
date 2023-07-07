@@ -1,0 +1,10 @@
+load("@python_deps//:requirements.bzl", "requirement")
+
+py_library(
+    name = "bard_module",
+    srcs = ["bard_module.py"],
+    deps = [
+        requirement("bardapi")
+    ],
+    visibility = ["//visibility:public"],
+)

@@ -1,0 +1,5 @@
+.env
+bazel-bin
+bazel-out
+bazel-testlogs
+bazel-bard
