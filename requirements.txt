@@ -1,1 +1,1 @@
-bardapi
+bardapi==0.1.23a

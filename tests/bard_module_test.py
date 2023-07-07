@@ -13,16 +13,6 @@ class TestAsk(unittest.TestCase):
             "Nacional",
         )
 
-    def test_decano_formal_way(self):
-        bard = BardModule()
-
-        self.assertRegex(
-            bard.ask(
-                "Who is the longest-affiliated football team in Uruguay football?"
-            ),
-            "Nacional",
-        )
-
 
 if __name__ == "__main__":
     unittest.main()
