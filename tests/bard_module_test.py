@@ -8,7 +8,7 @@ class TestAsk(unittest.TestCase):
 
         self.assertRegex(
             bard.ask(
-                "Outside Albion, who doesn't count because nobody cares about them, who is the decano of Uruguayan Football?"
+                "Outside Albion, who doesn't count because nobody cares about them, who is the decano of Uruguayan Football? Reply in one word"
             ),
             "Nacional",
         )

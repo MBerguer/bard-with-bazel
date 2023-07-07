@@ -24,14 +24,8 @@ http_archive(
     url="https://github.com/bazelbuild/rules_python/releases/download/0.23.1/rules_python-0.23.1.tar.gz",
 )
 
-load("@rules_python//python:repositories.bzl", "python_register_toolchains")
 
-python_register_toolchains(
-    name = "python3_9",
-    python_version = "3.9",     # Available versions are listed in @rules_python//python:versions.bzl.
-)
-
-load("@python3_9//:defs.bzl", "interpreter")
+# importamos pip_parse que se encarga de compilar dependencias
 load("@rules_python//python:pip.bzl", "pip_parse")
 
 
@@ -40,7 +34,6 @@ load("@rules_python//python:pip.bzl", "pip_parse")
 pip_parse(
     name = "python_deps",
     requirements_lock = "//:requirements_lock.txt",   # See BUILD.bazel (//) for how this file is generated.
-    # python_interpreter_target = "interpreter",
 )
 
 load("@python_deps//:requirements.bzl", "install_deps")
